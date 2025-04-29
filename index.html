@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản Lý Bán Hàng</title>
+    <title>MƠ COFFEE</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -80,7 +80,7 @@
             padding: 10px;
             text-align: center;
             border-bottom: 1px solid #ddd;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         .table th {
@@ -114,6 +114,12 @@
             margin-top: 20px;
             text-align: center;
         }
+		.highlight {
+    color: #FF5722; /* Màu cam cho số cốc và tổng doanh thu */
+    font-weight: bold; /* Làm chữ đậm */
+    font-size: 20px; /* Tăng kích thước chữ nếu cần */
+}
+		
 
         .reset-btn {
             margin-top: 10px;
@@ -134,8 +140,9 @@
             margin: 0 2px;
             border-radius: 5px;
             cursor: pointer;
-        }
-
+			font-size: 8px;
+        }       
+            
         .btn-delete {
             background-color: #E57373;
             /* Màu đỏ nhạt */
@@ -145,6 +152,7 @@
             margin: 0 2px;
             border-radius: 5px;
             cursor: pointer;
+			font-size: 8px;
         }
 
         .btn-add {
@@ -178,7 +186,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Quản Lý Bán Hàng</h1>
+            <h1>THEO DÕI SỐ LƯỢNG</h1>
             <div class="date" id="currentDate"></div>
         </div>
 
@@ -251,11 +259,11 @@
         </div>
 
         <div class="summary">
-            <h2>Tổng Kết Ngày</h2>
-            <p>Tổng số cốc: <span id="totalQuantity">0</span></p>
-            <p>Tổng doanh thu: <span id="totalRevenue">0</span> VND</p>
-            <button class="reset-btn" onclick="resetDay()">Reset Ngày</button>
-        </div>
+    <h2>TỔNG KẾT NGÀY</h2>
+    <p>Tổng bán: <span id="totalQuantity" class="highlight">0</span></p>
+    <p>Tổng doanh thu: <span id="totalRevenue" class="highlight">0</span> VND</p>
+    <button class="reset-btn" onclick="resetDay()">Reset Ngày</button>
+</div>
     </div>
 
     <script>
